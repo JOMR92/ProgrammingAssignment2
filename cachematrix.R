@@ -1,21 +1,17 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Sets a matrix, gets it, then sets the inverse and gets it
+## makeCacheMatrix -> Sets a matrix, gets it, then sets the inverse and gets the inverse
 
 makeCacheMatrix <- function(x = matrix()) { ##setting the matrix
             m <- NULL
-            set <- function(y){ ## sets x as the variable in the parent directory
-                  x <<-y
+            set <- function(y){ 
+                  x <<-y     ## sets x as the variable in the parent directory
                   m <<- NULL ## nulls previous values for the matrix
             }
             get <- function () x ## getter for matrix
             setinverse <- function (solve) 
-                  m <<- solve  ##setter for matrix
-            getinverse <- function () m
+                  m <<- solve  ##setter for inversed matrix
+            getinverse <- function () m #getter for inversed matrix
             list( set = set, get=get, setmean=setmean, getmean=getmean)#writing as a list
             }
-
 
 ## caches (is this a verb?) the inverse of a matrix and solves it
 
